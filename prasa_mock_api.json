@@ -1,0 +1,350 @@
+{
+    "source": "mockoon:1.8.0",
+    "data": [
+        {
+            "type": "environment",
+            "item": {
+                "uuid": "",
+                "lastMigration": 10,
+                "name": "CountriesAPI",
+                "endpointPrefix": "countries",
+                "latency": 0,
+                "port": 3001,
+                "routes": [
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "GetCountryList",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\r\n    {\r\n    \"id\" : \"1\",\r\n    \"name\" : \"Sri Lanka\"\r\n},\r\n{\r\n    \"id\" : \"2\",\r\n    \"name\" : \"India\"\r\n}\r\n]",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": []
+                            },
+                            {
+                                "uuid": "",
+                                "body": "{}",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "body",
+                                        "modifier": null,
+                                        "value": null,
+                                        "isRegex": false
+                                    }
+                                ]
+                            }
+                        ],
+                        "enabled": true
+                    }
+                ],
+                "proxyMode": false,
+                "proxyHost": "",
+                "https": false,
+                "cors": false,
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Origin",
+                        "value": "*"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Methods",
+                        "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Headers",
+                        "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                    }
+                ],
+                "proxyReqHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ],
+                "proxyResHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ]
+            }
+        },
+        {
+            "type": "environment",
+            "item": {
+                "uuid": "",
+                "lastMigration": 10,
+                "name": "StatesAPI",
+                "endpointPrefix": "states",
+                "latency": 0,
+                "port": 3002,
+                "routes": [
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "GetStateByCountry",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\r\n    {\r\n    \"id\" : \"1\",\r\n    \"name\" : \"Western\"\r\n},\r\n{\r\n    \"id\" : \"2\",\r\n    \"name\" : \"Southern\"\r\n}\r\n]",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "query",
+                                        "modifier": "countryId",
+                                        "value": "1",
+                                        "isRegex": false
+                                    }
+                                ]
+                            },
+                            {
+                                "uuid": "",
+                                "body": "[\r\n    {\r\n    \"id\" : \"3\",\r\n    \"name\" : \"Kerala\"\r\n},\r\n{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"Tamilnadu\"\r\n}\r\n]",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "query",
+                                        "modifier": "countryId",
+                                        "value": "2",
+                                        "isRegex": false
+                                    }
+                                ]
+                            }
+                        ],
+                        "enabled": true
+                    }
+                ],
+                "proxyMode": false,
+                "proxyHost": "",
+                "https": false,
+                "cors": false,
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Origin",
+                        "value": "*"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Methods",
+                        "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Headers",
+                        "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                    }
+                ],
+                "proxyReqHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ],
+                "proxyResHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ]
+            }
+        },
+        {
+            "type": "environment",
+            "item": {
+                "uuid": "",
+                "lastMigration": 10,
+                "name": "CitiesAPI",
+                "endpointPrefix": "cities",
+                "latency": 0,
+                "port": 3003,
+                "routes": [
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "GetCitiesByState",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\r\n    {\r\n    \"id\" : \"1\",\r\n    \"name\" : \"Colombo\"\r\n},\r\n{\r\n    \"id\" : \"2\",\r\n    \"name\" : \"Gampaha\"\r\n}\r\n]",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "query",
+                                        "modifier": "stateId",
+                                        "value": "1",
+                                        "isRegex": false
+                                    }
+                                ]
+                            },
+                            {
+                                "uuid": "",
+                                "body": "[\r\n    {\r\n    \"id\" : \"3\",\r\n    \"name\" : \"Galle\"\r\n},\r\n{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"Matara\"\r\n}\r\n]",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "query",
+                                        "modifier": "stateId",
+                                        "value": "2",
+                                        "isRegex": false
+                                    }
+                                ]
+                            },
+                            {
+                                "uuid": "",
+                                "body": "[\r\n    {\r\n    \"id\" : \"5\",\r\n    \"name\" : \"Kochi\"\r\n},\r\n{\r\n    \"id\" : \"6\",\r\n    \"name\" : \"Kozhikode \"\r\n}\r\n]",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "query",
+                                        "modifier": "stateId",
+                                        "value": "3",
+                                        "isRegex": false
+                                    }
+                                ]
+                            },
+                            {
+                                "uuid": "",
+                                "body": "[\r\n    {\r\n    \"id\" : \"7\",\r\n    \"name\" : \"Chennai\"\r\n},\r\n{\r\n    \"id\" : \"8\",\r\n    \"name\" : \"Madurai \"\r\n}\r\n]",
+                                "latency": 0,
+                                "statusCode": "200",
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "query",
+                                        "modifier": "stateId",
+                                        "value": "4",
+                                        "isRegex": false
+                                    }
+                                ]
+                            }
+                        ],
+                        "enabled": true
+                    }
+                ],
+                "proxyMode": false,
+                "proxyHost": "",
+                "https": false,
+                "cors": true,
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Origin",
+                        "value": "*"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Methods",
+                        "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Headers",
+                        "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                    }
+                ],
+                "proxyReqHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ],
+                "proxyResHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ]
+            }
+        }
+    ]
+}
